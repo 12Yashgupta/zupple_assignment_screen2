@@ -1,0 +1,162 @@
+.container {
+  position: relative;
+  padding-left: 11rem;
+  padding-right: 11rem;
+  padding-top: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid white;
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  padding: 0.5rem;
+  position: relative;
+  margin: 0;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: #202437;
+  color: white;
+  font-size: 17px;
+  margin: 0;
+}
+
+.left,
+.right {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 1rem;
+}
+
+.left td,
+.right td {
+  padding: 1rem;
+}
+
+.labels td:nth-child(1) {
+  width: 200px;
+}
+
+.labels td:nth-child(2) {
+  width: 70%;
+}
+
+.left tr:nth-child(even),
+.right tr:nth-child(even) {
+  background-color: #202437;
+}
+
+.left tr:nth-child(odd),
+.right tr:nth-child(odd) {
+  background-color: #11141C;
+}
+
+.tag {
+  background-color: #1B5599;
+  color: #fff;
+  padding: 0.1rem;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 0.2rem;
+}
+
+.hash {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon-copy,
+.icon-close {
+  margin-left: 5px;
+  color: white;
+  cursor: pointer;
+  height: 17px;
+}
+
+small {
+  color: #707A95;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .labels td:nth-child(1),
+  .labels td:nth-child(2) {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .labels {
+    width: 100%;
+    padding: 1rem;
+
+    font-size: 15px;
+  }
+
+  .labels td:nth-child(1) {
+    width: 30%;
+    padding: 10px;
+  }
+
+  .left .labels {
+    margin-bottom: -60px;
+  }
+
+  .labels td:nth-child(2) {
+    width: 60%;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
